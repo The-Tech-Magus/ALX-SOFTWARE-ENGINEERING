@@ -1,0 +1,56 @@
+#!/bin/bash
+
+#prints out working directory
+pwd
+
+#list content of the current diretory
+ls
+
+#changes working directory to users home directory
+cd ~
+
+#list contents od the current directory in long format
+ls -l
+
+#list all files including hodden files
+ls -la
+
+#list current directory in long format, uid and gid displayed numerically, hidden files displayed first
+ls -ln
+
+#creates a new directory in a specific directory using absolut pathname
+mkdir /home/magus-phoeagle-tech/Phoeagle_Projects
+
+#copy directories from a directory to another using absolute pathname
+cp /home/magus-phoeagle-tech/ALX-SOFTWARE-ENGINEERING/.git/git-hidden /home/magus-phoeagle-tech/Phoeagle-Projects
+
+#remove a directory uisng absolute pathname
+rm -r /home/magus-phoeagle-tech/ALX-SOFTWARE-ENGINEERING/.git/git-hidden
+
+#changes the working directory to the previous one
+cd -
+
+
+#prints all files in working directory, parent directory and bin directory
+ls -la . .. /bin
+
+#prints  the type of file
+file /home/magus-phoeagle-tech/Phoeagle_Projects
+
+#create symbolic link
+ln -s /usr/bin _bin_
+
+#copy all the txt file extension in the working directory to the parent directory
+cp *.html ..
+
+#copy all files beginning with uppercase letter to parent directory
+cp [[:upper:]]* . ..
+
+#delete all file in the current working directory that ends with character ~
+rm *~
+
+#create a script that create 3 directories at the same time
+mkdir -p /home/magus-phoeagle-tech/ALX-SOFTWARE-ENGINEERING/Playground/SoftwareEngineering/Project
+
+#list all files and directories of the current directory, separated by commas
+ls -ampv
